@@ -6,9 +6,11 @@ module.exports = (sequelize, DataTypes) => {
     password: DataTypes.STRING,
     gender: DataTypes.STRING,
     role: DataTypes.STRING
-  }, {});
+  },
+   {});
   admin.associate = function(models) {
     // associations can be defined here
+    admin.hasOne(models.blog)
   };
   return admin;
 };
