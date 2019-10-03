@@ -1,11 +1,17 @@
-const db = require ('../../db/models')
+const db = require('../../db/models')
 
-const { admin } = db;
+const {
+  admin
+} = db;
 
 module.exports = {
   getAdmin: (req, res) => {
-    admin.findAll()
-    .then(result => res.send(result))
-    .catch(error => res.send(error))
+    admin.findAll({
+        include: [{
+          model: db.blog
+        }]
+      })
+      .then(result => res.send(result))
+      .catch(error => res.send(error))
   }
 }
