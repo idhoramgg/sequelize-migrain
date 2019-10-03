@@ -7,5 +7,11 @@ module.exports = {
     blog.findAll()
     .then(result => res.send(result))
     .catch(error => res.send(error))
+  },
+  addBlog: (req, res) => {
+    blog.create(req.body)
+      .then(result => {
+        res.send(result);
+      }).catch(error => res.send(error))
   }
 }
