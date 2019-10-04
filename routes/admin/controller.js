@@ -8,7 +8,8 @@ module.exports = {
   getAdmin: (req, res) => {
     admin.findAll({
         include: [{
-          model: db.blog
+          model: db.blog,
+          attributes: ['title', 'body', 'comment']
         }]
       })
       .then(result => res.send(result))

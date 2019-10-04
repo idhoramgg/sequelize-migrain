@@ -3,7 +3,6 @@
 module.exports = {
   up: (queryInterface, Sequelize) => {
     return queryInterface.bulkInsert('blogs', [{
-      id: '20',
       title: 'Judul;',
       body : 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit neque natus aut reiciendis voluptates placeat ab vitae, dolorem praesentium sint.',
       comment: 'tai',
