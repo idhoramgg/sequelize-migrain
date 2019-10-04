@@ -2,6 +2,9 @@
   "name": "sequelize-migrain",
   "version": "1.0.0",
   "main": "index.js",
+  "engines": {
+    "node": "12.x"
+  },
   "scripts": {
     "start": "node index",
     "dev": "nodemon index",
